@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+
+
+/* 当前页html body样式 */
+*html,*html body /* 修正IE6振动bug */{background-image:url(about:blank);background-attachment:fixed;}
+html, body{overflow:hidden;min-width:989px;min-height:600px;}
+body{position:relative;z-index:1;}
+
+/* flash_control */
+#flash_control .icon-up i,#flash_control .icon-up i:hover,
+#flash_control .icon-play i,#flash_control .icon-play i:hover,
+#flash_control .icon-pause i,#flash_control .icon-pause i:hover,
+#flash_control .icon-down i, #flash_control .icon-down i:hover{background:url(../img/icon-s.png) no-repeat;}
+#flash_control{position:fixed;z-index:900;width:51px;top:-9999em;right:3em;}
+*html #flash_control{position:absolute;top:expression(eval(document.documentElement.scrollTop));}
+#flash_control a{cursor:pointer;display:block;margin-bottom:1px;*zoom:1;filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#99000000', endColorstr='#99000000');background:transparent;background:rgba(0,0,0,.6);}
+#flash_control a i{display:block;height:100%;width:100%;}
+#flash_control .icon-up, #flash_control .icon-down{visibility:hidden;}
+#flash_control .icon-up i{background-position:-415px 16px;height:51px;width:51px;}
+#flash_control .icon-up i:hover{background-position:-232px 16px;height:51px;width:51px;}
+#flash_control .icon-play i{background-position:-354px 16px;height:51px;width:51px;display:none;}
+#flash_control .icon-play i:hover{background-position:-171px 16px;height:51px;width:51px;}
+#flash_control .icon-pause i{background-position:-293px 16px;height:51px;width:51px;}
+#flash_control .icon-pause i:hover{background-position:-110px 16px;height:51px;width:51px;}
+#flash_control .icon-down i{background-position:12px 16px;height:51px;width:51px;}
+#flash_control .icon-down i:hover{background-position:-49px 16px;height:51px;width:51px;}
+#flash_control .on .icon-up, #flash_control .on .icon-down{visibility:visible;}
+#flash_control .on .icon-play i{display:block;}
+#flash_control .on .icon-pause i{display:none;}
+
+.flash li{position:absolute;overflow:hidden;z-index:601;left:0;}
+.flash .default{z-index:605;}
+.flash img{width:100%;height:100%;}
+#tip {position:absolute; top:0; margin:0 auto;text-align:center;color:red;z-index:9999; width:100%;}
